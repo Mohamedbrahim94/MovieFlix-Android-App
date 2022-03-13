@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <data>
+
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".movieflex.movflix.ui.Home_page.MainActivity"
+        android:background="#121212">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="500dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                app:layout_constraintGuide_begin="247dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/popularMoviesRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/guideline" />
+
+
+            <TextView
+                android:id="@+id/seeMorePopularTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/popularMoviesRecyclerView"
+                android:text="SeeMore"
+                android:textColor="#0277BD"
+                android:textSize="20sp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:id="@+id/TopRatedTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+
+                android:text="TopRatedMovies"
+                android:textColor="#F5C518"
+                android:textSize="22sp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@id/seeMorePopularTextView" />
+
+            <TextView
+                android:id="@+id/seeAllTopRatedTxtView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/TopRatedTextView"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="1dp"
+                android:text="See All"
+                android:textSize="20sp"
+                android:textColor="#0277BD" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/topRatedMoviesRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="@id/guideline2"
+                app:layout_constraintTop_toTopOf="@id/TopRatedTextView" />
+
+            <TextView
+                android:id="@+id/upComingTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                android:text="UpcomingMovies"
+                android:textColor="#F5C518"
+                android:textSize="22sp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@id/topRatedMoviesRecyclerView" />
+
+            <TextView
+                android:id="@+id/seeAllUpComingTxtView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/upComingTextView"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="1dp"
+                android:text="See All"
+                android:textSize="20sp"
+                android:textColor="#0277BD" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/upComingMoviesRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:layout_constraintTop_toTopOf="@id/upComingTextView" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</layout>
